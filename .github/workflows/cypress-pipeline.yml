@@ -1,0 +1,31 @@
+# nome da pipeline
+name: Run regression tests
+
+# momento que será executada (gatilho)
+on:
+  pull_request:
+    branches: [main]
+
+# o que será executado na pipeline
+jobs:
+  cypress-run:
+    # maquina que em que será executada
+    runs-on: windows-latest
+
+    # passos de execução
+    steps:
+      # clonar o projeto
+      - name: Checkout/Clone project
+        uses: actions/checkout@v4
+      
+      # exemplo de execução via terminal
+      - name: Exemplo execucao terminal
+        run: echo Exemplo comando no terminal
+
+      # execução e configuração do projeto
+      - name: Run testes
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
