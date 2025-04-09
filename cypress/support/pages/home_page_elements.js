@@ -7,6 +7,7 @@ export const elementsHome = {
         topHeader: "#top_header",
         logo: ".logo",
         menuHome: "#menuHome",
+        menuLateral: ".offside-menu",
         heart: ".fa-heart",
         bagShopping: ".fa-shopping-bag",
         search: ".search_width"

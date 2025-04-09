@@ -15,5 +15,14 @@ export default{
         cy.get(elementsHome.pages.login).should('be.visible')
         .click()
         cy.url().should('include', "/login")
+    },
+
+    acessarMenuLateral(){
+        cy.visit('/')
+        cy.get(elementsHome.header.menuLateral).click()
+    },
+
+    acessarMenuDropdown(){
+
     }
 }
